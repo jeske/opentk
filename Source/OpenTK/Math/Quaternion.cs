@@ -684,8 +684,9 @@ namespace OpenTK
         /// <returns>The result of the calculation.</returns>
         public static Quaternion operator *(Quaternion left, Quaternion right)
         {
-            Multiply(ref left, ref right, out left);
-            return left;
+            Quaternion result;
+            Multiply(ref left, ref right, out result);
+            return result;
         }
 
         /// <summary>
